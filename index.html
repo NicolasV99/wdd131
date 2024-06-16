@@ -8,6 +8,7 @@
     <meta name="author" content="Nicolas Velasquez">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/base.css">
+    <script src="scripts/getdates.js" defer></script>
 </head>
 <body>
     <header>
@@ -26,8 +27,7 @@
                 <div class="about-section">
                     <p>My name is Nicolas. I was born in Colombia and live with my family in Tulua, Valle. I am currently a website builder in a startup. I spent time with my wife and we love to travel and eat delicious food together!</p>
                     <img src="/images/profile.png" alt="headshot" >
-                </div>
-                
+                </div> 
             </section>
             <section class="location">
                 <h2>Tulua, Valle</h2>
@@ -39,16 +39,18 @@
             </section>
         </section>
         <section class="card">
-            <h2>Web Dev Resources</h2>
-            <ul>
-                <li><a href="https://css-tricks.com/">CSS Tricks</a></li>
-                <li><a href="https://www.w3schools.com/">W3 Schools</a></li>
-                <li><a href="https://www.udemy.com/">Udemy</a></li>
-            </ul>
+            <section class="resources">
+                <h2>Web Dev Resources</h2>
+                <ul class="resources-list">
+                    <li><a href="https://css-tricks.com/">CSS Tricks</a></li>
+                    <li><a href="https://www.w3schools.com/">W3 Schools</a></li>
+                    <li><a href="https://www.udemy.com/">Udemy</a></li>
+                </ul>
+            </section>
         </section>
     </main>
     <footer>
-        <p><span id="currentYear"></span> Nicolas Velasquez - Colombia</p>
+        <p>©<span id="currentYear"></span>🌎 Nicolas Velasquez 🌎 Colombia</p>
         <p id="lastModified"></p>
     </footer>
 </body>

@@ -1,6 +1,8 @@
 /* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
 
+/*Palette - https://coolors.co/palette/e7ecef-274c77-6096ba-a3cef1-8b8c89*/
+
 /* Global Styles */
 body {
     font-family: 'Open Sans', sans-serif;
@@ -62,41 +64,51 @@ main {
 }
 
 .card {
-    background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 15px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    padding: 1rem;
+    padding: 0px 10px 10px 10px;
+    background-image: linear-gradient(to top,#fff 90%,#274C77 20%);
+    
 }
 /*END - Main and card code */
 
 .about-section {
     display: flex;
-
+    padding: 20px 10px 0px 10px;
+    p{
+        padding-right: 20px;;
+    }
 }
 
 .info{
     display: flex;
+    padding: 0px 10px 10px 10px;
+    p{
+        padding-left: 20px;;
+    }
 
 }
 
 .about h2{
     text-align: center;
-    background-color: #274C77;
     color: #fff;
     font-size: 24px;
+    margin: 0;
+    padding-top: 10px;
 }
 
 .location h2{
     text-align: center;
     border-bottom: 1px solid #8B8C89;
     font-size: 24px;
+    padding-bottom: 10px;
 }
 
 .about img{
     display: block;
     margin: 1rem auto;
-    max-width: 100px;
+    max-width: 150px;
     height: auto;
     border-radius: 5px;
 }
@@ -104,10 +116,38 @@ main {
 .location img {
     display: block;
     margin: 1rem auto;
-    max-width: 150px;
+    max-width: 250px;
     height: auto;
     border-radius: 5px;
 }
+
+/*Start - Web Dev Fundamentals Section CSS*/
+
+.resources{
+    height: 100%;
+}
+
+.resources h2{
+    text-align: center;
+    color: #fff;
+    font-size: 24px;
+    margin: 0;
+    padding-top: 10px;
+}
+
+.resources-list{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    height: 80%;
+    li{
+        padding: 5px;
+    }
+
+}
+
+/*END - Web Dev Fundamentals Section CSS*/
 
 footer {
     background-color: #003366;
@@ -117,9 +157,10 @@ footer {
 }
 
 footer span {
-    color: #ffcc00;
+    color: #fff;
 }
 
 #lastModified {
     margin-top: 0.5rem;
+    color: #A3CEF1;
 }
