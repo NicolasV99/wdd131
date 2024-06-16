@@ -77,7 +77,7 @@ main {
     display: flex;
     padding: 20px 10px 0px 10px;
     p{
-        padding-right: 20px;;
+        padding-right: 20px;
     }
 }
 
@@ -85,7 +85,7 @@ main {
     display: flex;
     padding: 0px 10px 10px 10px;
     p{
-        padding-left: 20px;;
+        padding-left: 20px;
     }
 
 }
@@ -141,10 +141,10 @@ main {
     align-items: flex-start;
     justify-content: center;
     height: 80%;
-    li{
-        padding: 5px;
-    }
+}
 
+.resources-list li{
+    padding: 5px;
 }
 
 /*END - Web Dev Fundamentals Section CSS*/
