@@ -74,18 +74,19 @@ main {
 .about-section {
     display: flex;
     padding: 20px 10px 0px 10px;
-    p{
-        padding-right: 20px;
-    }
+}
+
+.about-section p{
+    padding-right: 20px;
 }
 
 .info{
     display: flex;
     padding: 0px 10px 10px 10px;
-    p{
-        padding-left: 20px;
-    }
+}
 
+.info p{
+    padding-left: 20px;
 }
 
 .about h2{
