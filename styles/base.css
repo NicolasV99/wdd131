@@ -180,9 +180,11 @@ main {
 
 .resources-list li a:hover{
     color: #274C77;
-    &:after{
-        width: 100%;
-    }
+}
+
+
+.resources-list li a:hover:after{
+    width: 100%;
 }
 
 /*END - Web Dev Fundamentals Section CSS*/
