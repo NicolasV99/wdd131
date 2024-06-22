@@ -1,0 +1,8 @@
+@media (min-width: 710px) {
+    #menu {
+		display: none; /* hide hamburger button */
+	}
+    .navigation {
+		flex-direction: row;
+	}
+}
