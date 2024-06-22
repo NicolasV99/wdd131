@@ -1,8 +1,85 @@
 @media (min-width: 710px) {
-    #menu {
-		display: none; /* hide hamburger button */
-	}
-    .navigation {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+        background-color: var(--second-background-color);
+    }
+
+    header h1 {
+        color: var(--second-font-color);
+        font-size: 32px;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav{
+        display: flex;
+        flex-direction: row;
+        position: static;
+        background-color: transparent;
+        width: auto;
+        margin: 0;
+    }
+
+	.navigation ul{
+		display: flex;
+		align-items: center;
 		flex-direction: row;
 	}
+
+    nav a {
+        text-decoration: none;
+        color: var(--second-font-color);
+        padding: 1rem 2rem;
+        text-align: left;
+    }
+
+    nav a:hover {
+        color: grey;
+    }
+
+    #menu {
+        display: none; /* Hide the hamburger menu button on larger screens */
+    }
+
+    main {
+        max-width: 100%;
+        margin: 0;
+        padding: 2rem;
+        
+        background-color: var(--first-background-color);
+        color: var(--first-font-color);
+    }
+
+	main .figure-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    main h2 {
+        text-align: center;
+    }
+
+    figure {
+		margin: 1rem 0;
+        text-align: center;
+    }
+
+    figure img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    figcaption {
+        font-family: var(--body-font);
+        color: var(--first-font-color);
+        padding-top: 0.5rem;
+    }
+
+    
 }
