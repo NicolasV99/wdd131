@@ -95,7 +95,7 @@ main {
 }
 
 .data h2, .weather h2 {
-    background-color: var(--second-background-color);
+    background-color: var(--first-background-color);
     color: var(--first-font-color);
     padding: 10px;
     margin: -20px -20px 10px -20px;
@@ -119,29 +119,27 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .content {
-        grid-template-columns: 1fr!important;
-        grid-gap: 20px;
-    }
+    @media screen and (max-width: 768px) {
+        .content {
+            position: relative;
+            margin-top: 0px;
+            grid-template-columns: 1fr; /* Single column layout for mobile */
+        }
+    
+        .data, .weather {
+            justify-self: unset;
+            max-width: 100%;
+            grid-column: 1 / span 1; /* Span full width */
+            text-align: center;
+        }
 
-    .data, .weather {
-        justify-self: center; /* Center cards horizontally */
-        max-width: 100%; /* Full width for mobile */
-    }
+        .bg-image {
+            position: relative; /* Ensure image respects document flow */
+            height: auto; /* Allow image height to adjust based on content */
+        }
 
-    .weather {
-        margin-top: 20px; /* Space between data and weather cards */
-    }
-
-    .bg-image {
-        position: relative;
-        object-fit: contain;
-    }
-
-    main {
-        position: absolute;
-        width: 100%;
-        height: auto; /* Adjust based on header and footer height */
-        overflow:visible
+        body{
+            min-height: 110vh;
+        }
     }
 }
