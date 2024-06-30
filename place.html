@@ -13,45 +13,39 @@
     <script src="scripts/place.js" defer></script>
 </head>
 <body>
-    <div class="container">
-        <header>
-            Switzerland
-        </header>
-        <main>
-            <picture>
-                <source srcset="images/switzerland-large.webp" media="(min-width: 1000px)">
-                <source srcset="images/switzerland-medium.webp" media="(min-width: 550px)">
-                <img src="images/switzerland-small.webp" alt="Beautiful view of Switzerland" class="bg-image">
-            </picture>
-            <div class="content">
-                <div class="data">
-                    <h2 class="title">Data</h2>
-                    <p><strong>Area:</strong> 41,290 sq km</p>
-                    <p><strong>Population:</strong> 8,570,146</p>
-                    <p><strong>Capital:</strong> Bern</p>
-                    <p><strong>Languages:</strong> German, French, Italian, Romansh</p>
-                    <p><strong>Currency:</strong> Swiss Franc</p>
-                    <p><strong>Time Zone:</strong> UTC+1</p>
-                    <p><strong>Calling Code:</strong> +41</p>
-                    <p><strong>Internet TLD:</strong> .ch</p>
-                </div>
-                <div class="weather">
-                    <div class="weather-title">
-                        <h2>Weather</h2>
-                        <img src="images/weather.webp" alt="">
-                    </div>
-                    
-                    <p><strong>Temperature:</strong> 10°C</p>
-                    <p><strong>Conditions:</strong> Partly Cloudy</p>
-                    <p><strong>Wind:</strong> 5 km/h</p>
-                    <p><strong>Wind Chill:</strong> 8°C</p>
-                </div>
+    <header>
+        Switzerland
+    </header>
+    <main>
+        <picture>
+            <source srcset="images/switzerland-large.webp" media="(min-width: 1000px)">
+            <source srcset="images/switzerland-medium.webp" media="(min-width: 550px)">
+            <img src="images/switzerland-small.webp" alt="Beautiful view of Switzerland" class="bg-image">
+        </picture>
+        <div class="content">
+            <div class="data">
+                <h2>Data</h2>
+                <p><strong>Area:</strong> 41,290 sq km</p>
+                <p><strong>Population:</strong> 8,570,146</p>
+                <p><strong>Capital:</strong> Bern</p>
+                <p><strong>Languages:</strong> German, French, Italian, Romansh</p>
+                <p><strong>Currency:</strong> Swiss Franc</p>
+                <p><strong>Time Zone:</strong> UTC+1</p>
+                <p><strong>Calling Code:</strong> +41</p>
+                <p><strong>Internet TLD:</strong> .ch</p>
             </div>
-        </main>
-        <footer>
-            <p>©<span id="currentYear"></span>🌎 Nicolas Velasquez 🌎 Colombia</p>
-            <p id="lastModified"></p>
-        </footer>
-    </div>   
+            <div class="weather">
+                <h2>Weather</h2>
+                <p><strong>Temperature:</strong> 10°C</p>
+                <p><strong>Conditions:</strong> Partly Cloudy</p>
+                <p><strong>Wind:</strong> 5 km/h</p>
+                <p><strong>Wind Chill:</strong> 8°C</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>©<span id="currentYear"></span>🌎 Nicolas Velasquez 🌎 Colombia</p>
+        <p id="lastModified"></p>
+    </footer>
 </body>
 </html>

@@ -15,13 +15,9 @@ body {
     font-family: 'Open Sans', sans-serif;
     background-color: #ffffff;
     color: #000000;
-}
-
-.container {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    min-height: 100vh; /* Ensure container takes full height of viewport */
+    min-height: 100vh; /* Ensure full viewport height */
 }
 
 header {
@@ -35,10 +31,10 @@ header {
 }
 
 main {
+    position: relative;
     width: 100%;
-    max-width: 1200px; /* Limit width of content */
-    padding: 0px;
-    margin-top: 0px; /* Adjust as needed */
+    height: calc(100vh - 120px); /* Adjust based on header and footer height */
+    overflow: hidden;
 }
 
 .bg-image {
@@ -54,8 +50,11 @@ main {
 .content {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 columns of equal width */
-    grid-template-rows:min-content;
-    grid-gap: 10px;
+    grid-gap: 20px;
+    max-width: 100%; /* Limit width of content */
+    padding: 10px;
+    margin-top: 20px; /* Space below header */
+    margin-bottom: 20px; /* Space above footer */
 }
 
 .data {
@@ -67,6 +66,7 @@ main {
     border-radius: 10px;
     max-width: 300px;
     margin-top: 20px;
+    justify-self: flex-start;
     
 }
 
@@ -78,35 +78,41 @@ main {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     max-width: 200px;
+    justify-self: flex-end;
     
 }
 
-.weather-title{
-    display: flex;
-    align-items: center;
+.weather h2 {
     background-color: var(--second-background-color);
-    justify-content: flex-start;
-
+    color: var(--first-font-color);
+    padding: 10px;
+    margin: -20px -20px 10px -20px;
+    border-radius: 10px 10px 0 0;
+    position: relative;
 }
 
-.weather-title img{
+.weather h2::after {
+    content: '';
+    display: inline-block;
     width: 40px;
     height: 30px;
+    background-image: url('images/weather.webp');
+    background-size: cover;
+    margin-left: 10px;
+    position: absolute;
+    right: -50px; /* Adjust as needed */
+    top: 50%;
+    transform: translateY(-50%);
 }
 
-.weather h2{
-    margin: 0px;
-    padding-right: 15px;
-}
-
-
-.data h2, .weather-title {
-    background-color: var(--first-background-color);
+.data h2, .weather h2 {
+    background-color: var(--second-background-color);
     color: var(--first-font-color);
     padding: 10px;
     margin: -20px -20px 10px -20px;
     border-radius: 10px 10px 0 0;
 }
+
 
 .data p, .weather p {
     margin: 5px 0;
@@ -123,20 +129,24 @@ footer {
     bottom: 0;
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
     .content {
-        display: block;
-        width: 100%;
+        grid-template-columns: 1fr!important;
+        grid-gap: 20px;
+    }
+
+    .data, .weather {
+        justify-self: center; /* Center cards horizontally */
+        max-width: 100%; /* Full width for mobile */
+    }
+
+    .weather {
+        margin-top: 20px; /* Space between data and weather cards */
     }
 
     .bg-image {
         position: relative;
         object-fit: contain;
-    }
-
-    .data, .weather {
-        width: 60%;
-        margin: 10px 0;
     }
 
     main {
