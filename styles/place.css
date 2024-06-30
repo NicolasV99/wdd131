@@ -94,15 +94,24 @@ main {
     border-radius: 10px 10px 0 0;
 }
 
-.weather h2::after{
-    content: "⛅";
+@media screen and (min-width: 900px) {
+    .weather h2::after{
+        content: '⛅';
+    } 
 }
+
 .data h2, .weather h2 {
     background-color: var(--first-background-color);
     color: var(--first-font-color);
     padding: 10px;
     margin: -20px -20px 10px -20px;
     border-radius: 10px 10px 0 0;
+}
+
+@media screen and (min-width: 900px){
+    .weather-logo{
+        display: none;
+    }
 }
 
 
