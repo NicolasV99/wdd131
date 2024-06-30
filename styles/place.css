@@ -88,21 +88,10 @@ main {
     padding: 10px;
     margin: -20px -20px 10px -20px;
     border-radius: 10px 10px 0 0;
-    position: relative;
 }
 
-.weather h2::after {
-    content: '';
-    display: inline-block;
-    width: 40px;
-    height: 30px;
-    background-image: url('images/weather.webp');
-    background-size: cover;
-    margin-left: 10px;
-    position: absolute;
-    right: -50px; /* Adjust as needed */
-    top: 50%;
-    transform: translateY(-50%);
+.weather h2:after {
+    content: "⛅";
 }
 
 .data h2, .weather h2 {
