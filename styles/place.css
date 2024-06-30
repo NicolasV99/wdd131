@@ -94,7 +94,7 @@ main {
     border-radius: 10px 10px 0 0;
 }
 
-@media screen and (min-width: 771px) {
+@media(min-width: 771px) {
     .weather h2::after{
         content: '⛅';
     } 
@@ -108,7 +108,7 @@ main {
     border-radius: 10px 10px 0 0;
 }
 
-@media screen and (min-width: 770px){
+@media(min-width: 770px){
     .weather-logo{
         display: none;
     }
