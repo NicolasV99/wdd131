@@ -113,6 +113,8 @@ function createTempleCard(temple) {
     // Create image element
     const image = document.createElement('img');
     image.src = temple.imageUrl;
+    image.width = 400;
+    image.height = 250;
     image.alt = temple.templeName; // Provide a descriptive alt text
     image.loading = 'lazy'; // Use native lazy loading
 

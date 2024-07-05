@@ -80,8 +80,9 @@
     }
 
     figure img {
-        max-width: 400px;
+        max-width: 90%;
         height: auto;
+        
     }
 
     figcaption {
