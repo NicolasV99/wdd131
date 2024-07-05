@@ -90,7 +90,7 @@
     }
 
     figcaption h3{
-        text-transform: capi;
+        text-transform: capitalize;
         font-family: var(--header-font)
     }
     
