@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root {
+    --header-font: 'Tenor Sans', sans-serif;
+    --body-font: 'Inter', sans-serif;
+    --first-background-color: #fff;
+    --second-background-color: #000;
+    --first-font-color: #000;
+    --second-font-color: #fff;
+}
+
+header, h1, h2 {
+    font-family: var(--header-font);
+}
+
+p, h3 {
+    font-family: var(--body-font);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--second-background-color);
+    position: relative;
+}
+
+header h1 {
+    color: var(--second-font-color);
+    font-size: 28px;
+    padding: 1rem;
+    margin: 0;
+}
+
+nav {
+    display: none;
+    flex-direction: column;
+    background-color: var(--second-background-color);
+    width: 100%;
+    position: absolute;
+    top: 5rem;
+    left: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--second-font-color);
+    padding: 1rem;
+    text-align: center;
+}
+
+nav.open {
+    display: flex;
+}
+
+nav a:hover {
+    color: grey;
+}
+
+#menu {
+    display: block;
+    background: var(--second-background-color);
+    color: var(--second-font-color);
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+#menu::before {
+    content: "☰";
+}
+
+#menu.open::before {
+    content: "❎";
+}
+
+main {
+    max-width: 700px;
+    margin: 0;
+    padding: 1rem;
+    color: var(--first-font-color);
+    font-family: var(--body-font);
+}
+
+main h2 {
+    text-align: center;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+figure {
+    margin: 1rem 0;
+    text-align: center;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+}
+
+figure img {
+    max-width: 80%;
+    height: auto;
+    padding: 20px;
+
+}
+
+figcaption {
+    font-family: var(--body-font);
+    color: var(--first-font-color);
+    padding-top: 0.5rem;
+}
+
+footer {
+    max-width: 100%!important;
+    padding: 2rem;
+    margin: 0!important;
+    color: var(--second-font-color);
+    background-color: var(--second-background-color);
+    font-family: var(--body-font);
+    text-align: center;
+}
+
+footer span {
+    color: #fff;
+}
+
+#lastModified {
+    margin-top: 0.5rem;
+    color: grey;
+}
