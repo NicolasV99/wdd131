@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Confirmation</title>
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/form.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div>
+            <h1>Thank You for Your Review!</h1>
+        </div>
+    </header>
+    <main>
+        <div class="review-container">
+            <p>Your review has been submitted successfully.</p>
+            <p class="review-text">You have completed <span id="reviewCount">0</span> reviews.</p>
+        </div>
+    </main>
+    
+
+
+
+    <footer>
+        <p>©<span id="currentYear"></span>🌎 Nicolas Velasquez 🌎 Colombia</p>
+        <p id="lastModified"></p>
+    </footer>
+    <script>
+        // Display the review count
+        const reviewCounter = localStorage.getItem('reviewCounter') || 0;
+        document.getElementById('reviewCount').textContent = reviewCounter;
+    </script>
+</body>
+</html>

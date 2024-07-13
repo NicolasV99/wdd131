@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 - Dynamic Web Fundamentals - Nicolas Velasquez</title>
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Nicolas Velasquez - Demonstrate knowledge by applying HTML and CSS in the design and development of a page from a Wireframe Design">
+    <meta name="author" content="Nicolas Velasquez">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Marcellus&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/form.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div>
+            <h1>Product Review</h1>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <form id="productReviewForm">
+                <label for="productName">Product Name</label><br>
+                <select id="productName" name="productName" required>
+                    <option value="" disabled selected>Select a Product ...</option>
+                    <!-- Dynamically generated options will go here -->
+                </select><br><br>
+    
+                <label>Overall Rating</label><br>
+                <div class="stars">
+                    <input type="radio" id="star1" name="rating" value="1" required>
+                    <label for="star1">★</label>
+                    <input type="radio" id="star2" name="rating" value="2" required>
+                    <label for="star2">★★</label>
+                    <input type="radio" id="star3" name="rating" value="3" required>
+                    <label for="star3">★★★</label>
+                    <input type="radio" id="star4" name="rating" value="4" required>
+                    <label for="star4">★★★★</label>
+                    <input type="radio" id="star5" name="rating" value="5" required>
+                    <label for="star5">★★★★★</label>
+                </div><br>
+    
+                <label for="installationDate">Date of Installation</label><br>
+                <input type="date" id="installationDate" name="installationDate" required><br><br>
+    
+                <label>Which features did you find useful in the product? <small>(Check all that apply)</small></label><br>
+                <div class="features">
+                    <input type="checkbox" id="durability" name="features" value="Durability">
+                    <label for="durability">Durability</label><br>
+                    <input type="checkbox" id="easeOfUse" name="features" value="Ease of Use">
+                    <label for="easeOfUse">Ease of Use</label><br>
+                    <input type="checkbox" id="performance" name="features" value="Performance">
+                    <label for="performance">Performance</label><br>
+                    <input type="checkbox" id="design" name="features" value="Design">
+                    <label for="design">Design</label><br><br>
+                </div>
+    
+                <label for="writtenReview">Written Review <small>(Optional)</small></label><br>
+                <textarea id="writtenReview" name="writtenReview"></textarea><br><br>
+    
+                <label for="userName">Your Name <small>(Optional)</small></label><br>
+                <input type="text" id="userName" name="userName"><br><br>
+    
+                <input type="submit" value="Post Review">
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p>©<span id="currentYear"></span>🌎 Nicolas Velasquez 🌎 Colombia</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>

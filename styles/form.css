@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Marcellus&display=swap');
+
+
+:root{
+    --primary-background: #FFFFFF;
+    --second-background: #ccc;
+
+    --header-font: 'Marcellus', serif;
+    --body-font: 'Inter', sans-serif;
+
+    --first-font-color: #000;
+    --second-font-color: #fff;
+}
+
+/* Global Styles */
+body {
+    font-family: var(--body-font);
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #333;
+    overflow-x: hidden;
+}
+
+h1, h2, h3 {
+    font-family: var(--header-font);
+    font-size: 40px;
+}
+
+h2{
+    font-size: 30px;
+}
+
+h3{
+    font-size: 22px;
+}
+
+header, footer{
+    width: 100vw;
+    left: 0;
+    right: 0;
+    box-sizing: border-box;
+    padding: 10px 0;
+    background-color: var(--second-background);
+    text-align: center;
+}
+
+main{
+    margin: 0 auto;
+    padding: 30px;
+    text-align: center;
+    max-width: 960px;
+}
+
+.container {
+    background-color: #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 90%;
+    margin: auto;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-top: 0px;
+}
+
+select, input[type="date"], textarea, input[type="text"], input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: none;
+    box-sizing: border-box;
+}
+
+
+.stars {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    width: auto;
+}
+
+.stars label {
+    font-size: 1em;
+    color: #1a1a1a;
+    cursor: pointer;
+}
+
+
+form input[type="checkbox"], input[type="radio"] {
+    width: auto;
+}
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.features label {
+    width: 45%;
+    margin-top: 5px;
+}
+
+.review-container {
+    background-color: #e0e0e0;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.review-container .review-text{
+    font-weight: bold;
+}
+
+form input[type="submit"]{
+    background: #000;
+    color: #fff;
+    border: 2px solid #000;
+    padding: 0.7rem;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+form input[type="submit"]:hover{
+    background: transparent;
+    color: #000;
+    border: 2px solid #000;
+}
+
+@media (min-width: 780px) {
+    /* Desktop Styles */
+    .container {
+        max-width: 80%;
+        padding: 40px;
+    }
+
+    label {
+        font-size: 1.1em;
+    }
+
+    select, input[type="date"], textarea, input[type="text"], input[type="submit"] {
+        font-size: 1em;
+    }
+
+    .stars label {
+        font-size: 1.5em;
+    }
+
+    .features{
+        flex-wrap: nowrap;
+    }
+
+    .footer {
+        font-size: 1em;
+    }
+}
