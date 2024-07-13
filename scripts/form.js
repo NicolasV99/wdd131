@@ -27,32 +27,36 @@ const products = [
     }
   ];
   
-  // Populate the Product Name select element
-  const productSelect = document.getElementById('productName');
-  products.forEach(product => {
+// Populate the Product Name select element
+const productSelect = document.getElementById('productName');
+products.forEach(product => {
     const option = document.createElement('option');
     option.value = product.id;
     option.textContent = product.name;
     productSelect.appendChild(option);
-  });
+});
   
-  // Function to increment the review counter
-  function incrementReviewCounter() {
-    let reviewCounter = localStorage.getItem('reviewCounter');
+// Function to increment the review counter
+function incrementReviewCounter() {
+let reviewCounter = localStorage.getItem('reviewCounter');
     if (!reviewCounter) {
       reviewCounter = 0;
     }
     reviewCounter = parseInt(reviewCounter) + 1;
     localStorage.setItem('reviewCounter', reviewCounter);
-  }
+}
   
-  // Handle form submission
-  document.getElementById('productReviewForm').addEventListener('submit', function(event) {
+// Handle form submission
+document.getElementById('productReviewForm').addEventListener('submit', function(event) {
     event.preventDefault();
     incrementReviewCounter();
     // Redirect to review.html page
     window.location.href = 'review.html';
-  });
+});
+
+// Display the review count
+const reviewCounter = localStorage.getItem('reviewCounter') || 0;
+document.getElementById('reviewCount').textContent = reviewCounter;
 
 
 // Update the current year
