@@ -27,38 +27,33 @@ const products = [
     }
   ];
   
-
-
-  document.addEventListener('DOMContentLoaded', () => {
-    const productSelect = document.getElementById('productName');
-  
-    // Populate product options dynamically
-    products.forEach(product => {
-      const option = document.createElement('option');
-      option.value = product.id;
-      option.textContent = product.name;
-      productSelect.appendChild(option);
-    });
-  
-    // Check if on review page
-    if (document.getElementById('reviewCount')) {
-      updateReviewCount();
-    }
+  // Populate the Product Name select element
+  const productSelect = document.getElementById('productName');
+  products.forEach(product => {
+    const option = document.createElement('option');
+    option.value = product.id;
+    option.textContent = product.name;
+    productSelect.appendChild(option);
   });
   
-  function updateReviewCount() {
-    if (localStorage.getItem('reviewCount')) {
-      let reviewCount = parseInt(localStorage.getItem('reviewCount'), 10);
-      reviewCount++;
-      localStorage.setItem('reviewCount', reviewCount);
-      document.getElementById('reviewCount').textContent = reviewCount;
-    } else {
-      localStorage.setItem('reviewCount', 1);
-      document.getElementById('reviewCount').textContent = 1;
+  // Function to increment the review counter
+  function incrementReviewCounter() {
+    let reviewCounter = localStorage.getItem('reviewCounter');
+    if (!reviewCounter) {
+      reviewCounter = 0;
     }
+    reviewCounter = parseInt(reviewCounter) + 1;
+    localStorage.setItem('reviewCounter', reviewCounter);
   }
-
   
+  // Handle form submission
+  document.getElementById('productReviewForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    incrementReviewCounter();
+    // Redirect to review.html page
+    window.location.href = 'review.html';
+  });
+
 // Update the current year
 const currentYearElement = document.getElementById('currentYear');
 const currentYear = new Date().getFullYear();
@@ -68,4 +63,3 @@ currentYearElement.textContent = currentYear;
 const lastModifiedElement = document.getElementById('lastModified');
 const lastModifiedDate = new Date(document.lastModified);
 lastModifiedElement.textContent = `Last Modification: ${lastModifiedDate.toLocaleDateString()} ${lastModifiedDate.toLocaleTimeString()}`;
-
