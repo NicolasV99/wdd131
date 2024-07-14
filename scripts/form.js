@@ -27,38 +27,38 @@ const products = [
     }
   ];
   
-// Populate the Product Name select element
-const productSelect = document.getElementById('productName');
-products.forEach(product => {
-    const option = document.createElement('option');
-    option.value = product.id;
-    option.textContent = product.name;
-    productSelect.appendChild(option);
-});
+
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const productSelect = document.getElementById('productName');
   
-// Function to increment the review counter
-function incrementReviewCounter() {
-let reviewCounter = localStorage.getItem('reviewCounter');
-    if (!reviewCounter) {
-      reviewCounter = 0;
+    // Populate product options dynamically
+    products.forEach(product => {
+      const option = document.createElement('option');
+      option.value = product.id;
+      option.textContent = product.name;
+      productSelect.appendChild(option);
+    });
+  
+    // Check if on review page
+    if (document.getElementById('reviewCount')) {
+      updateReviewCount();
     }
-    reviewCounter = parseInt(reviewCounter) + 1;
-    localStorage.setItem('reviewCounter', reviewCounter);
-}
+  });
   
-// Handle form submission
-document.getElementById('productReviewForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    incrementReviewCounter();
-    // Redirect to review.html page
-    window.location.href = 'review.html';
-});
+  function updateReviewCount() {
+    if (localStorage.getItem('reviewCount')) {
+      let reviewCount = parseInt(localStorage.getItem('reviewCount'), 10);
+      reviewCount++;
+      localStorage.setItem('reviewCount', reviewCount);
+      document.getElementById('reviewCount').textContent = reviewCount;
+    } else {
+      localStorage.setItem('reviewCount', 1);
+      document.getElementById('reviewCount').textContent = 1;
+    }
+  }
 
-// Display the review count
-const reviewCounter = localStorage.getItem('reviewCounter') || 0;
-document.getElementById('reviewCount').textContent = reviewCounter;
-
-
+  
 // Update the current year
 const currentYearElement = document.getElementById('currentYear');
 const currentYear = new Date().getFullYear();
