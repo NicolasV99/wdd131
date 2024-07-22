@@ -4,28 +4,31 @@ const projects = [
         title: 'Qanvas',
         description: 'Short description of Project 1.',
         image: 'images/qanvas.png',
-        category: 'custom'
+        category: 'custom',
+        link: 'https://qanvas.com.co/'
     },
     {
         title: 'Taylor Henderson',
         description: 'Short description of Project 2.',
         image: 'images/taylor-henderson.png',
-        category: 'agent'
+        category: 'agent',
+        link: 'https://westtexasrealestate.net/'
     },
     {
         title: 'Robert Ramey',
         description: 'Short description of Project 3.',
         image: 'images/robert-ramey.png',
-        category: 'agent'
+        category: 'agent',
+        link: 'https://robertrameyrealty.com/'
     },
     {
         title: 'Rick Gonzalez Properties',
         description: 'Short description of Project 3.',
         image: 'images/rick-gonzalez-properties.png',
-        category: 'team'
+        category: 'team',
+        link: 'https://rickgonzalezproperties.com/'
     }
 ];
-
 // Function to display projects
 function displayProjects(filteredProjects) {
     const projectsGrid = document.getElementById('projectsGrid');
@@ -35,7 +38,7 @@ function displayProjects(filteredProjects) {
         const projectCard = document.createElement('div');
         projectCard.classList.add('project-card');
         projectCard.innerHTML = `
-            <a href="#">
+            <a href="${project.link}" target="_blank">
                 <img src="${project.image}" alt="${project.title} Image">
                 <h3>${project.title}</h3>
                 <p>${project.description}</p>
@@ -66,7 +69,6 @@ document.querySelectorAll('.filter-btn').forEach(button => {
 
 // Initial display of all projects
 displayProjects(projects);
-
 
 document.addEventListener('DOMContentLoaded', () => {
     const burger = document.querySelector('.burger');

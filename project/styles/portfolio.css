@@ -54,6 +54,10 @@ nav ul li a {
 nav ul li a:hover{
     font-weight: 600;
 }
+
+.burger {
+    display: none;
+}
 /*END - Header Code*/
 
 /* Homepage Code*/
@@ -146,12 +150,13 @@ nav ul li a:hover{
     padding: 10px 20px;
     border-radius: 5px;
     font-family: 'Marcellus', serif;
+    transition: background-color 0.3s;
 }
 
 .project-button a:hover{
     color: #fff;
     background-color: #000;
-    transition: .2;
+    
 }
 
 
@@ -180,6 +185,7 @@ nav ul li a:hover{
     padding: 10px 20px;
     border-radius: 5px;
     font-family: 'Marcellus', serif;
+    transition: background-color 0.3s;
 }
 
 .cta a:hover{

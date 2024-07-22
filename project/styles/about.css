@@ -119,6 +119,7 @@ nav ul li a:hover{
     padding: 10px 20px;
     border-radius: 5px;
     font-family: 'Marcellus', serif;
+    transition: background-color 0.3s;
 }
 
 .cta a:hover{

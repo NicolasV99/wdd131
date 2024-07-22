@@ -1,3 +1,4 @@
+/*Global Styles*/
 body {
     font-family: 'Inter', sans-serif;
     margin: 0;
@@ -9,17 +10,9 @@ h1, h2, h3{
     font-family: 'Marcellus', serif;
 }
 
-h1{
-    font-size: 40px;
-}
-h2{
-    font-size: 34px
-}
-     
-
+/*Header Code*/
 header {
     background-color: #ccc;
-    padding: 20px;
 }
 
 nav {
@@ -65,103 +58,66 @@ nav ul li a:hover{
 .burger {
     display: none;
 }
+/*END - Header Code*/
 
-.projects-page {
+/*Experience Section*/
+
+.experience-page {
     padding: 50px;
     background-color: #fff;
     text-align: center;
 }
 
-.projects-page h1 {
+.experience-page h1 {
     font-family: 'Marcellus', serif;
     font-size: 36px;
 }
 
-.projects-page p {
+.experience-page p {
     font-size: 18px;
     margin-bottom: 40px;
 }
 
-.burger {
-    display: none;
+.experience-section {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 
-/*Filter Section*/
-.filter-section {
-    margin-bottom: 30px;
-}
-
-.filter-btn {
-    padding: 10px 20px;
-    margin: 5px;
-    font-family: 'Marcellus', serif;
-    font-size: 16px;
-    background-color: #fff;
-    border: 1px solid #000;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.filter-btn:hover, .filter-btn.active {
-    background-color: #000;
-    color: #fff;
-}
-
-/*END - Filter Section*/
-
-/*Project Section*/
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-
-.project-card {
-    background-color: #fff;
+.experience-item, .education-item {
+    background-color: #f9f9f9;
+    padding: 20px;
     border: 1px solid #ddd;
     border-radius: 10px;
-    overflow: hidden;
-    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: left;
+    margin: 20px 0;
 }
 
-.project-card a {
-    text-decoration: none;
-    color: inherit;
-    display: block;
-}
-
-.project-card img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-}
-
-.project-card h3 {
+.experience-item h2, .education-item h2 {
     font-family: 'Marcellus', serif;
-    font-size: 20px;
-    margin: 10px;
+    font-size: 28px;
+    margin-bottom: 20px;
 }
 
-.project-card p {
-    margin: 10px;
-    font-size: 16px;
+.experience-entry h3, .education-entry h3 {
+    font-family: 'Marcellus', serif;
+    font-size: 24px;
+    margin-bottom: 10px;
 }
 
-.project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.experience-item ul {
+    list-style: disc;
+    padding-left: 20px;
 }
 
-/*END - Project Section*/
+/*END - Experience Section*/
 
 
 /*CTA Section*/
 .cta {
     text-align: center;
     padding: 50px;
-    background-color: #000;
-    color: #fff;
+    background-color: #ccc;
 }
 
 .cta-section{
@@ -174,17 +130,18 @@ nav ul li a:hover{
 
 .cta a {
     text-decoration: none;
-    color: #fff;
+    color: #000;
     background-color: transparent;
-    border: 1px solid #fff;
+    border: 1px solid #000;
     padding: 10px 20px;
     border-radius: 5px;
     font-family: 'Marcellus', serif;
+    transition: background-color 0.3s;
 }
 
 .cta a:hover{
-    color: #000;
-    background-color: #fff;
+    color: #fff;
+    background-color: #000;
     transition: .2;
 }
 /*END- CTA Section*/
@@ -197,10 +154,11 @@ header, footer{
     right: 0;
     box-sizing: border-box;
     padding: 10px 0;
-    background-color: #ccc;
+    background-color: #fff;
     text-align: center;
 }
 
+/*Footer code*/
 
 /* Responsive part */
 @media (max-width: 768px) {
@@ -246,15 +204,12 @@ header, footer{
         transform: rotate(45deg) translate(-5px, -6px);
     }
 
-    .projects-section {
-        padding: 20px 0 60px 0;
-    }
-    .projects-grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    .experience-section {
+        flex-direction: column;
+        gap: 20px;
     }
 
     .cta {
         padding: 20px;
     }
 }
-
