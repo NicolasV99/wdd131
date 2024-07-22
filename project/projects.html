@@ -34,52 +34,20 @@
         <section id="projects" class="projects-page">
             <h1>Projects</h1>
             <p>Welcome to my projects page. Here you can explore some of the work I have done over time. Click on each project card to learn more about it.</p>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <a href="project1.html">
-                        <img src="project1-image.jpg" alt="Project 1 Image">
-                        <h3>Project 1</h3>
-                        <p>Short description of Project 1.</p>
-                    </a>
-                </div>
-                <div class="project-card">
-                    <a href="project2.html">
-                        <img src="project2-image.jpg" alt="Project 2 Image">
-                        <h3>Project 2</h3>
-                        <p>Short description of Project 2.</p>
-                    </a>
-                </div>
-                <div class="project-card">
-                    <a href="project3.html">
-                        <img src="project3-image.jpg" alt="Project 3 Image">
-                        <h3>Project 3</h3>
-                        <p>Short description of Project 3.</p>
-                    </a>
-                </div>
-                <div class="project-card">
-                    <a href="project4.html">
-                        <img src="project4-image.jpg" alt="Project 4 Image">
-                        <h3>Project 4</h3>
-                        <p>Short description of Project 4.</p>
-                    </a>
-                </div>
-                <div class="project-card">
-                    <a href="project5.html">
-                        <img src="project5-image.jpg" alt="Project 5 Image">
-                        <h3>Project 5</h3>
-                        <p>Short description of Project 5.</p>
-                    </a>
-                </div>
-                <div class="project-card">
-                    <a href="project6.html">
-                        <img src="project6-image.jpg" alt="Project 6 Image">
-                        <h3>Project 6</h3>
-                        <p>Short description of Project 6.</p>
-                    </a>
-                </div>
+            
+            <div class="filter-section">
+                <button class="filter-btn" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="agent">Agent Site</button>
+                <button class="filter-btn" data-filter="team">Team Site</button>
+                <button class="filter-btn" data-filter="custom">Custom</button>
             </div>
-            <div class="cta">
-                <h2>Want to see more?</h2>
+            <div class="projects-grid" id="projectsGrid">
+                <!-- Project cards will be injected here by JavaScript -->
+            </div>
+        </section>
+        <section class="cta">
+            <div class="cta-section">
+                <h2>Let's Connect</h2>
                 <a href="#contact">Get in Touch</a>
             </div>
         </section>

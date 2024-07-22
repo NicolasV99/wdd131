@@ -5,6 +5,18 @@ body {
     color: #000;
 }
 
+h1, h2, h3{
+    font-family: 'Marcellus', serif;
+}
+
+h1{
+    font-size: 40px;
+}
+h2{
+    font-size: 34px
+}
+     
+
 header {
     background-color: #ccc;
     padding: 20px;
@@ -20,6 +32,7 @@ nav .logo {
     font-family: 'Marcellus', serif;
     font-size: 24px;
     font-weight: bold;
+    padding-left: 20px;
 }
 
 nav ul {
@@ -32,6 +45,7 @@ nav ul {
 
 nav ul.nav-links {
     margin-left: auto;
+    margin-right: 50px;
 }
 
 nav ul li {
@@ -42,6 +56,10 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: #000;
+}
+
+nav ul li a:hover{
+    font-weight: 600;
 }
 
 .burger {
@@ -85,6 +103,14 @@ nav ul li a {
     color: #fff;
 }
 
+.cta-section{
+    padding: 20px 0 40px 0;
+}
+
+.cta h2{
+    font-size: 32px;
+}
+
 .cta a {
     text-decoration: none;
     color: #fff;
@@ -92,7 +118,6 @@ nav ul li a {
     border: 1px solid #fff;
     padding: 10px 20px;
     border-radius: 5px;
-    
     font-family: 'Marcellus', serif;
 }
 
@@ -171,11 +196,8 @@ header, footer{
         max-width: 300px;
     }
 
-    .projects-section {
-        padding: 20px;
-    }
-    .projects-grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    .about-content{
+        flex-direction: column;
     }
 
     .cta {

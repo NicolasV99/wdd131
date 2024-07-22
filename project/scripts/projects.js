@@ -1,3 +1,73 @@
+// Array of projects
+const projects = [
+    {
+        title: 'Qanvas',
+        description: 'Short description of Project 1.',
+        image: 'images/qanvas.png',
+        category: 'custom'
+    },
+    {
+        title: 'Taylor Henderson',
+        description: 'Short description of Project 2.',
+        image: 'images/taylor-henderson.png',
+        category: 'agent'
+    },
+    {
+        title: 'Robert Ramey',
+        description: 'Short description of Project 3.',
+        image: 'images/robert-ramey.png',
+        category: 'agent'
+    },
+    {
+        title: 'Rick Gonzalez Properties',
+        description: 'Short description of Project 3.',
+        image: 'images/rick-gonzalez-properties.png',
+        category: 'team'
+    }
+];
+
+// Function to display projects
+function displayProjects(filteredProjects) {
+    const projectsGrid = document.getElementById('projectsGrid');
+    projectsGrid.innerHTML = ''; // Clear existing content
+
+    filteredProjects.forEach(project => {
+        const projectCard = document.createElement('div');
+        projectCard.classList.add('project-card');
+        projectCard.innerHTML = `
+            <a href="#">
+                <img src="${project.image}" alt="${project.title} Image">
+                <h3>${project.title}</h3>
+                <p>${project.description}</p>
+            </a>
+        `;
+        projectsGrid.appendChild(projectCard);
+    });
+}
+
+// Function to filter projects
+function filterProjects(category) {
+    if (category === 'all') {
+        displayProjects(projects);
+    } else {
+        const filteredProjects = projects.filter(project => project.category === category);
+        displayProjects(filteredProjects);
+    }
+}
+
+// Event listeners for filter buttons
+document.querySelectorAll('.filter-btn').forEach(button => {
+    button.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+        filterProjects(button.getAttribute('data-filter'));
+    });
+});
+
+// Initial display of all projects
+displayProjects(projects);
+
+
 document.addEventListener('DOMContentLoaded', () => {
     const burger = document.querySelector('.burger');
     const navLinks = document.querySelector('.nav-links');
