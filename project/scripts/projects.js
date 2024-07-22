@@ -2,28 +2,28 @@
 const projects = [
     {
         title: 'Qanvas',
-        description: 'Short description of Project 1.',
+        description: '',
         image: 'images/qanvas.png',
         category: 'custom',
         link: 'https://qanvas.com.co/'
     },
     {
         title: 'Taylor Henderson',
-        description: 'Short description of Project 2.',
+        description: '',
         image: 'images/taylor-henderson.png',
         category: 'agent',
         link: 'https://westtexasrealestate.net/'
     },
     {
         title: 'Robert Ramey',
-        description: 'Short description of Project 3.',
+        description: '',
         image: 'images/robert-ramey.png',
         category: 'agent',
         link: 'https://robertrameyrealty.com/'
     },
     {
         title: 'Rick Gonzalez Properties',
-        description: 'Short description of Project 3.',
+        description: '',
         image: 'images/rick-gonzalez-properties.png',
         category: 'team',
         link: 'https://rickgonzalezproperties.com/'
