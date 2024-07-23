@@ -136,7 +136,8 @@ button:hover {
 .thank-you-message {
     margin-top: 20px;
     font-size: 18px;
-    color: #00b300; /* Green color for success message */
+    color: #000;
+    font-weight: bold;
 }
 
 
