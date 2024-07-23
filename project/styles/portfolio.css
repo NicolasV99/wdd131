@@ -58,6 +58,14 @@ nav ul li a:hover{
 .burger {
     display: none;
 }
+
+/* Logo styles */
+.logo img {
+    max-height: 50px; 
+    width: auto;
+    display: block;
+}
+
 /*END - Header Code*/
 
 /* Homepage Code*/

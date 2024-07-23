@@ -58,6 +58,14 @@ nav ul li a:hover{
 .burger {
     display: none;
 }
+
+/* Logo styles */
+.logo img {
+    max-height: 50px; 
+    width: auto;
+    display: block;
+}
+
 /*END - Header Code*/
 
 /*Experience Section*/
@@ -110,6 +118,10 @@ nav ul li a:hover{
     padding-left: 20px;
 }
 
+.education-entry p{
+    font-size: 16px;
+}
+
 /*END - Experience Section*/
 
 
@@ -117,7 +129,8 @@ nav ul li a:hover{
 .cta {
     text-align: center;
     padding: 50px;
-    background-color: #ccc;
+    background-color: #000;
+    color: #fff;
 }
 
 .cta-section{
@@ -130,9 +143,9 @@ nav ul li a:hover{
 
 .cta a {
     text-decoration: none;
-    color: #000;
+    color: #fff;
     background-color: transparent;
-    border: 1px solid #000;
+    border: 1px solid #fff;
     padding: 10px 20px;
     border-radius: 5px;
     font-family: 'Marcellus', serif;
@@ -140,8 +153,8 @@ nav ul li a:hover{
 }
 
 .cta a:hover{
-    color: #fff;
-    background-color: #000;
+    color: #000;
+    background-color: #fff;
     transition: .2;
 }
 /*END- CTA Section*/
@@ -154,7 +167,7 @@ header, footer{
     right: 0;
     box-sizing: border-box;
     padding: 10px 0;
-    background-color: #fff;
+    background-color: #ccc;
     text-align: center;
 }
 

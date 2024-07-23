@@ -66,6 +66,13 @@ nav ul li a:hover{
     display: none;
 }
 
+/* Logo styles */
+.logo img {
+    max-height: 50px; 
+    width: auto;
+    display: block;
+}
+
 .about-section {
     padding: 50px;
     background-color: #fff;
